@@ -17,7 +17,7 @@ export async function POST(req: Request) {
     const { messages }: { messages: Message[] } = await req.json();
 
     const model: GenerativeModel = genAI.getGenerativeModel({
-      model: "gemini-1.5-pro",
+      model: "gemini-1.5-pro-002",
     });
 
     const chatHistory = messages.map((msg: Message) => ({
